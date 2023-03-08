@@ -15,14 +15,15 @@ class MapViewModel {
     
     @Published var data: Data?
     
-    private func setUpNotifications() {
+    private func fetchFromDataRepository() {
+        // fetches data from remote repository
         dataRepo.getData()
             .sink { completion in
                 switch completion {
                 case .finished:
                     // handle completed receiving data
                     return
-                case .failure(let err):
+                case .failure(_):
                     // handle encountered failure
                     return
                 }
@@ -30,17 +31,25 @@ class MapViewModel {
                 self.data = data
             }
             .store(in: &cancellables)
-        
+    }
+    
+    private func setupNotifications() {
+        // receives a notification when app state changes
+        // & requests data from the remote data repository
         NotificationCenter.default
             .publisher(for: UIApplication.willEnterForegroundNotification, object: nil)
             .sink { _ in
-                self.dataRepo.getData()
+                self.fetchFromDataRepository()
             }
             .store(in: &cancellables)
     }
     
     init() {
+        // initiates and assigns the data repository
         self.dataRepo = DataRepository()
-        setUpNotifications()
+        
+        // subscribes for state change notifications
+        // for fetching data
+        self.setupNotifications()
     }
 }

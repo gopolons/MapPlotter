@@ -11,7 +11,7 @@ class NetworkConstants {
     static let baseURL: String = "https://landstack-public-dev2.s3-eu-west-2.amazonaws.com/"
 }
 
-enum MapDataAPIEndpoint: APIEndpointProtocol {
+enum MapDataAPIEndpoint {
     case main
     
     func url() -> String {

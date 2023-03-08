@@ -56,12 +56,64 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupMapView()
+        self.setupLoading()
+    }
+
+    init() {
+        self.viewModel = MapViewModel()
+        super.init(nibName: nil, bundle: nil)
+        self.setupData()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension MapViewController {
+    // method for setting up notification
+    // observers from view model
+    private func setupData() {
+        viewModel.$data
+            .receive(on: DispatchQueue.main)
+            .compactMap { $0 }
+            .sink { _ in
+            } receiveValue: { data in
+                self.loadingView.removeFromSuperview()
+                
+                // parse the data received from the server
+                self.geoJsonParser = GMUGeoJSONParser(data: data)
+                self.geoJsonParser.parse()
+                
+                // resets the renderer view upon receiving data (if renderer exists)
+                // to avoid data being duplicated on the map
+                if let eng = self.renderer {
+                    eng.clear()
+                }
+                
+                // render the GeoJSON from the remote repository on the map
+                self.renderer = GMUGeometryRenderer(map: self.mapView, geometries: self.geoJsonParser.features)
+                self.renderer.render()
+            }
+            .store(in: &cancellables)
+    }
+}
+
+extension MapViewController {
+    // method for assigning the Google Maps
+    // view on the view controller
+    private func setupMapView() {
         let camera = GMSCameraPosition(latitude: 51.35235237182491, longitude: -2.9246258603702318, zoom: 12)
         let mapView = GMSMapView(frame: .zero, camera: camera)
         
         self.mapView = mapView
         self.view = mapView
-        
+    }
+    
+    // method for adding the loading
+    // view on the view controller
+    private func setupLoading() {
         self.view.addSubview(loadingView)
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -72,32 +124,4 @@ class MapViewController: UIViewController {
             loadingView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
         ])
     }
-    
-    private func setUpData() {
-        viewModel.$data
-            .receive(on: DispatchQueue.main)
-            .compactMap { $0 }
-            .sink { _ in
-            } receiveValue: { data in
-                self.loadingView.removeFromSuperview()
-                
-                self.geoJsonParser = GMUGeoJSONParser(data: data)
-                self.geoJsonParser.parse()
-                
-                self.renderer = GMUGeometryRenderer(map: self.mapView, geometries: self.geoJsonParser.features)
-                self.renderer.render()
-            }
-            .store(in: &cancellables)
-    }
-
-    init() {
-        self.viewModel = MapViewModel()
-        super.init(nibName: nil, bundle: nil)
-        self.setUpData()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
-

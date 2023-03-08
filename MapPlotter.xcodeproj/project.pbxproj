@@ -19,11 +19,7 @@
 		94DE46B929B7BC9B0024012F /* MapPlotterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46B829B7BC9B0024012F /* MapPlotterUITestsLaunchTests.swift */; };
 		94DE46C929B8072F0024012F /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46C829B8072F0024012F /* DataRepository.swift */; };
 		94DE46CB29B807370024012F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46CA29B807370024012F /* MapViewModel.swift */; };
-		94DE46D029B92FD80024012F /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46CF29B92FD80024012F /* NetworkHandler.swift */; };
-		94DE46D229B930500024012F /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46D129B930500024012F /* Errors.swift */; };
 		94DE46D429B930CD0024012F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46D329B930CD0024012F /* Constants.swift */; };
-		94DE46D629B9393B0024012F /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46D529B9393B0024012F /* DTO.swift */; };
-		94DE46D829B93E5B0024012F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46D729B93E5B0024012F /* LoadingViewController.swift */; };
 		B9F6677B825A9A0B95871ACE /* Pods_MapPlotterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6564B6A9894A1ED8C50115 /* Pods_MapPlotterTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,11 +61,7 @@
 		94DE46B829B7BC9B0024012F /* MapPlotterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPlotterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		94DE46C829B8072F0024012F /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		94DE46CA29B807370024012F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		94DE46CF29B92FD80024012F /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
-		94DE46D129B930500024012F /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		94DE46D329B930CD0024012F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		94DE46D529B9393B0024012F /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
-		94DE46D729B93E5B0024012F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		A906EFE60C0DB5A49ADE674D /* Pods_MapPlotter_MapPlotterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapPlotter_MapPlotterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79B4C77050735CA52068295 /* Pods-MapPlotter-MapPlotterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapPlotter-MapPlotterUITests.debug.xcconfig"; path = "Target Support Files/Pods-MapPlotter-MapPlotterUITests/Pods-MapPlotter-MapPlotterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EABA2918890E0416EF1A52E2 /* Pods-MapPlotterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapPlotterTests.release.xcconfig"; path = "Target Support Files/Pods-MapPlotterTests/Pods-MapPlotterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				94DE469929B7BC9A0024012F /* MapViewController.swift */,
-				94DE46D729B93E5B0024012F /* LoadingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				94DE46C829B8072F0024012F /* DataRepository.swift */,
-				94DE46D529B9393B0024012F /* DTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,8 +200,6 @@
 		94DE46CE29B92FCF0024012F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				94DE46CF29B92FD80024012F /* NetworkHandler.swift */,
-				94DE46D129B930500024012F /* Errors.swift */,
 				94DE46D329B930CD0024012F /* Constants.swift */,
 			);
 			path = Utility;
@@ -458,12 +446,8 @@
 				94DE469A29B7BC9A0024012F /* MapViewController.swift in Sources */,
 				94DE46CB29B807370024012F /* MapViewModel.swift in Sources */,
 				94DE46C929B8072F0024012F /* DataRepository.swift in Sources */,
-				94DE46D629B9393B0024012F /* DTO.swift in Sources */,
-				94DE46D229B930500024012F /* Errors.swift in Sources */,
 				94DE469629B7BC9A0024012F /* AppDelegate.swift in Sources */,
 				94DE469829B7BC9A0024012F /* SceneDelegate.swift in Sources */,
-				94DE46D829B93E5B0024012F /* LoadingViewController.swift in Sources */,
-				94DE46D029B92FD80024012F /* NetworkHandler.swift in Sources */,
 				94DE46D429B930CD0024012F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
