@@ -56,7 +56,10 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // setting up the map view
         self.setupMapView()
+        
+        // putting up the loading overlay for initial launch
         self.setupLoading()
     }
 
