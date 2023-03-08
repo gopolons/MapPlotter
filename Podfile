@@ -8,6 +8,7 @@ target 'MapPlotter' do
   # Pods for MapPlotter
   pod 'GoogleMaps', '7.4.0'
   pod 'Google-Maps-iOS-Utils', '~> 4.1.0'
+  pod 'FirebaseAnalytics'
 
   target 'MapPlotterTests' do
     inherit! :search_paths

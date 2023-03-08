@@ -20,6 +20,7 @@
 		94DE46C929B8072F0024012F /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46C829B8072F0024012F /* DataRepository.swift */; };
 		94DE46CB29B807370024012F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46CA29B807370024012F /* MapViewModel.swift */; };
 		94DE46D429B930CD0024012F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE46D329B930CD0024012F /* Constants.swift */; };
+		94DE46DA29B953040024012F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94DE46D929B953040024012F /* GoogleService-Info.plist */; };
 		B9F6677B825A9A0B95871ACE /* Pods_MapPlotterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6564B6A9894A1ED8C50115 /* Pods_MapPlotterTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		94DE46C829B8072F0024012F /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		94DE46CA29B807370024012F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		94DE46D329B930CD0024012F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		94DE46D929B953040024012F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A906EFE60C0DB5A49ADE674D /* Pods_MapPlotter_MapPlotterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapPlotter_MapPlotterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79B4C77050735CA52068295 /* Pods-MapPlotter-MapPlotterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapPlotter-MapPlotterUITests.debug.xcconfig"; path = "Target Support Files/Pods-MapPlotter-MapPlotterUITests/Pods-MapPlotter-MapPlotterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EABA2918890E0416EF1A52E2 /* Pods-MapPlotterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapPlotterTests.release.xcconfig"; path = "Target Support Files/Pods-MapPlotterTests/Pods-MapPlotterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				94DE469729B7BC9A0024012F /* SceneDelegate.swift */,
 				94DE469E29B7BC9B0024012F /* Assets.xcassets */,
 				94DE46A029B7BC9B0024012F /* LaunchScreen.storyboard */,
+				94DE46D929B953040024012F /* GoogleService-Info.plist */,
 				94DE46A329B7BC9B0024012F /* Info.plist */,
 			);
 			path = MapPlotter;
@@ -217,6 +220,7 @@
 				94DE468F29B7BC9A0024012F /* Frameworks */,
 				94DE469029B7BC9A0024012F /* Resources */,
 				16D8B7ED8273A5D14F76E673 /* [CP] Copy Pods Resources */,
+				69A4B255319B23A22A6CB067 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +259,7 @@
 				94DE46AF29B7BC9B0024012F /* Frameworks */,
 				94DE46B029B7BC9B0024012F /* Resources */,
 				73A4ACDF444F482E83DAE3E9 /* [CP] Copy Pods Resources */,
+				25CE319469861148F79BA8C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,6 +321,7 @@
 			files = (
 				94DE46A229B7BC9B0024012F /* LaunchScreen.storyboard in Resources */,
 				94DE469F29B7BC9B0024012F /* Assets.xcassets in Resources */,
+				94DE46DA29B953040024012F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +359,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapPlotter/Pods-MapPlotter-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		25CE319469861148F79BA8C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapPlotter-MapPlotterUITests/Pods-MapPlotter-MapPlotterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapPlotter-MapPlotterUITests/Pods-MapPlotter-MapPlotterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapPlotter-MapPlotterUITests/Pods-MapPlotter-MapPlotterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		51C4EFA2C48CF10D315AF151 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,6 +396,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69A4B255319B23A22A6CB067 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapPlotter/Pods-MapPlotter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapPlotter/Pods-MapPlotter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapPlotter/Pods-MapPlotter-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73A4ACDF444F482E83DAE3E9 /* [CP] Copy Pods Resources */ = {
@@ -634,12 +674,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = georgiipolonskii.MapPlotter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgiipolonskii.MapPlotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -665,12 +705,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = georgiipolonskii.MapPlotter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgiipolonskii.MapPlotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

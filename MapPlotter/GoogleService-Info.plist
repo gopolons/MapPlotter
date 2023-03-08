@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>811135939919-hsf52pokg7qsu9d35ffvd0nmg8j80kui.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.811135939919-hsf52pokg7qsu9d35ffvd0nmg8j80kui</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAVnoCMHiDSWf5JReU419wcQocKuDZ3zjk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>811135939919</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.georgiipolonskii.MapPlotter</string>
+	<key>PROJECT_ID</key>
+	<string>mapplotter-e0702</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mapplotter-e0702.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:811135939919:ios:17e8516d64fe6c597b813a</string>
+</dict>
+</plist>
